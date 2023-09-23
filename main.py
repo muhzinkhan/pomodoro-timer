@@ -1,18 +1,19 @@
 from tkinter import *
 import tkinter.messagebox
 import math
+
+
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
 RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
-FONT_NAME = "Courier"
+FONT_NAME = "Segoe UI Semibold"
 WORK_MIN = 25          # 25
 SHORT_BREAK_MIN = 5     # 5
 LONG_BREAK_MIN = 20     # 20
 reps = 0
 timer = None
-
 # ---------------------------- TIMER RESET ------------------------------- #
 
 
@@ -64,8 +65,9 @@ def start_timer():
             # Message(work_noti, text="Time to work!", padx=20, pady=20).pack()
             # work_noti.after(5000, work_noti.destroy)
 
-
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
+
+
 def count_down(count):
 
     count_min = math.floor(count / 60)
@@ -85,14 +87,14 @@ def count_down(count):
             marks += "✅"
         check_marks.config(text=marks)
 
-
 # ---------------------------- UI SETUP ------------------------------- #
+
+
 window = Tk()
 window.title("Pomodoro")
 window.config(padx=100, pady=50, bg=YELLOW)
 window.iconbitmap("assets/pomodoro.ico")
 window.minsize(width=590, height=440)
-# window.geometry("600x440")
 
 title_label = Label(text="Pomodoro", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 35))
 title_label.grid(column=1, row=0)
@@ -113,14 +115,3 @@ check_marks = Label(fg=GREEN, bg=YELLOW)
 check_marks.grid(column=1, row=3)
 
 window.mainloop()
-
-
-
-
-
-
-
-
-
-
-

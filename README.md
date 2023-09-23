@@ -10,37 +10,33 @@ The Pomodoro Timer is a simple Windows application built using Python and the tk
 
 ## Features
 
-- Set custom work and break durations.
-- Start, pause, and reset the timer.
+- Start and reset the timer.
 - Get visual and audio notifications at the end of each session.
 - Track completed Pomodoro cycles.
-
-## Requirements
-
-- Python 3.x
-- tkinter (included in standard library)
-- Only Works on Windows machines. If you want, you can make supports for different platforms by forking it.😉
-
-## Installation
-
-1. Download the executable file form the releases .
-2. Just run it. That's all there's to it.
-
-## Usage
-
-1. Launch the application by running `pomodoro_timer.py`.
-2. Set the desired work and break durations using the input fields.
-3. Click the "Start" button to begin a Pomodoro session.
-4. During a session, the timer will count down the work duration.
-5. When the work duration ends, an audio and visual notification will alert you.
-6. Take a break, move on to the next session.
-7. After completing a set number of sessions, the application will track the number of completed Pomodoro cycles as checkmarks.
 
 ## Screenshots
 
 ![Main Screen](assets/Screenshot.png)
 
-## Configuration
+## Requirements
+
+- Only Works on Windows machines. If you want, you can make supports for different platforms by forking it.😉
+
+## Installation
+
+1. Download the zip file form the releases named `pomodoro.zip`.
+2. Extract it and run `pomodoro-timer.exe.` That's all there's to it.
+
+## Usage
+
+1. Launch the application by running `pomodoro-timer.exe` inside the `Pomodoro` folder.
+2. Click the "Start" button to begin a Pomodoro session.
+3. During a session, the timer will count down the work duration.
+4. When the work duration ends, an audio and visual notification will alert you.
+5. Take a break, move on to the next session.
+6. After completing a set number of sessions, the application will track the number of completed Pomodoro cycles as checkmarks.
+
+## Configuration For Developers
 
 You can customize the following parameters in `pomodoro_timer.py` and make a package out of it:
 
