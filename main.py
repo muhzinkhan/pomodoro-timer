@@ -19,7 +19,7 @@ timer = None
 def reset_timer():
     window.after_cancel(timer)
     canvas.itemconfig(timer_text, text="00:00")
-    title_label.config(text="Timer")
+    title_label.config(text="Pomodoro")
     check_marks.config(text="")
     global reps
     reps = 0
@@ -39,8 +39,8 @@ def start_timer():
 
     if reps % 8 == 0:
         count_down(long_break_sec)
-        title_label.config(text="LBreak", fg=RED)
-        tkinter.messagebox.showinfo("LBreak", "Time to take a long break!")
+        title_label.config(text="Long Break", fg=RED, font=(FONT_NAME, 30))
+        tkinter.messagebox.showinfo("Long Break", "Time to take a long break!")
         # lbreak_noti = Toplevel()
         # lbreak_noti.title('lbreak_noti')
         # Message(lbreak_noti, text="Time to take a long break!", padx=20, pady=20).pack()
@@ -48,15 +48,15 @@ def start_timer():
 
     elif reps % 2 == 0:
         count_down(short_break_sec)
-        title_label.config(text="SBreak", fg=PINK)
-        tkinter.messagebox.showinfo("SBreak", "Time to take a short break!")
+        title_label.config(text="Shot Break", fg=PINK, font=(FONT_NAME, 33))
+        tkinter.messagebox.showinfo("Shot Break", "Time to take a short break!")
         # sbreak_noti = Toplevel()
         # sbreak_noti.title('sbreak_noti')
         # Message(sbreak_noti, text="Time to take a short break!", padx=20, pady=20).pack()
         # sbreak_noti.after(5000, sbreak_noti.destroy)
     else:
         count_down(work_sec)
-        title_label.config(text="Work", fg=GREEN)
+        title_label.config(text="⏱️Work⏱️", fg=GREEN, font=(FONT_NAME, 37))
         if not reps == 1:
             tkinter.messagebox.showinfo("Work", "Time to work!")
             # work_noti = Toplevel()
@@ -91,9 +91,10 @@ window = Tk()
 window.title("Pomodoro")
 window.config(padx=100, pady=50, bg=YELLOW)
 window.iconbitmap("assets/pomodoro.ico")
+window.minsize(width=590, height=440)
+# window.geometry("600x440")
 
-
-title_label = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50))
+title_label = Label(text="Pomodoro", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 35))
 title_label.grid(column=1, row=0)
 
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
